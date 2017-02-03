@@ -1,0 +1,27 @@
+.project
+.settings/
+
+nbproject/
+nbactions.xml
+
+build.xml
+
+target/
+dependency-reduced-pom.xml
+
+# vim
+.*.sw[a-p]
+
+build/
+bin/
+dist/
+manifest.mf
+
+.DS_Store/
+
+*.iml
+*.ipr
+*.iws
+.idea/
+
+out/
