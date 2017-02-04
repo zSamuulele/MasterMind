@@ -14,12 +14,12 @@
             <Image url="@../images/mastermind.png" />
          </image>
       </ImageView>
-      <JFXButton id="singleplayer_btn" buttonType="RAISED" layoutX="265.0" layoutY="167.0" styleClass="btn" text="Singleplayer">
+      <JFXButton id="singleplayer_btn" buttonType="RAISED" layoutX="245.0" layoutY="167.0" styleClass="btn" text="Singleplayer">
          <font>
             <Font name="QUARTZO demo Bold" size="120.0" />
          </font>
       </JFXButton>
-      <JFXButton id="multiplayer_btn" buttonType="RAISED" layoutX="265.0" layoutY="337.0" prefHeight="251.0" prefWidth="834.0" styleClass="btn" text="Multiplayer">
+      <JFXButton id="multiplayer_btn" buttonType="RAISED" layoutX="245.0" layoutY="297.0" prefHeight="251.0" prefWidth="834.0" styleClass="btn" text="Multiplayer">
          <font>
             <Font name="QUARTZO demo Bold" size="120.0" />
          </font>
