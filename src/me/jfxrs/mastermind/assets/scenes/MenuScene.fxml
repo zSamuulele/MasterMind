@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="background" stylesheets="@../stylesheets/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView id="mastermind_image" fitHeight="900.0" fitWidth="890.0" layoutX="-225.0" layoutY="-290.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/mastermind.png" />
+         </image>
+      </ImageView>
+      <JFXButton id="singleplayer_btn" buttonType="RAISED" layoutX="358.0" layoutY="191.0" styleClass="btn" text="Singleplayer">
+         <font>
+            <Font name="Segoe UI Light" size="96.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="multiplayer_btn" buttonType="RAISED" layoutX="358.0" layoutY="350.0" prefHeight="205.0" prefWidth="614.0" styleClass="btn" text="Multiplayer">
+         <font>
+            <Font name="Segoe UI Light" size="96.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
