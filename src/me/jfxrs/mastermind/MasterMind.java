@@ -24,6 +24,7 @@ public class MasterMind extends Application {
 
         stage = new SimpleStage(primaryStage);
         stage.show(scene, "MasterMind - v" + VERSION, false);
+        stage.setIcon(getClass(), "assets/images/mastermind.png");
 
         playMenuAnimation();
     }
