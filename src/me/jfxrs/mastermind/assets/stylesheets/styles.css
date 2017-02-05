@@ -6,3 +6,16 @@
     -fx-background-color: #8199A3;
     -fx-text-fill: white;
 }
+
+.red_number {
+    -fx-text-fill: #EE7469;
+}
+
+.white_number {
+    -fx-text-fill: #FFF0D6;
+}
+
+.scorebar {
+    -fx-fill: #383732;
+    -fx-stroke-width: 0;
+}

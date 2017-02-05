@@ -10,12 +10,17 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import me.jfxrs.mastermind.events.MenuButtonClickEvent;
+import me.jfxrs.mastermind.listeners.MenuListener;
+import me.jfxrs.mastermind.objects.Game;
+import me.jfxrs.mastermind.objects.GameMode;
 
 public class MasterMind extends Application {
 
-    private static final String VERSION = "0.0.1";
+    public static final String VERSION = "0.0.1";
 
-    private static SimpleStage stage;
+    public static SimpleStage stage;
+    private static Game game;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -27,6 +32,7 @@ public class MasterMind extends Application {
         stage.setIcon(getClass(), "assets/images/mastermind.png");
 
         playMenuAnimation();
+        JavaFX.getEventManager().registerEvents(new MenuListener());
     }
 
     /**
@@ -40,19 +46,40 @@ public class MasterMind extends Application {
         scaleYAnim.play(image);
 
         scaleXAnim.setOnAnimationCompleted(() -> {
-            Node singlePlayer = JavaFX.fromId("singleplayer_btn");
+            Node singleplayer = JavaFX.fromId("singleplayer_btn");
             Node multiplayer = JavaFX.fromId("multiplayer_btn");
-            scaleXAnim.play(singlePlayer);
-            scaleYAnim.play(singlePlayer);
+            scaleXAnim.play(singleplayer);
+            scaleYAnim.play(singleplayer);
 
             scaleXAnim.setOnAnimationCompleted(() -> {
                 scaleXAnim.play(multiplayer);
                 scaleYAnim.play(multiplayer);
+
+                singleplayer.setOnMouseReleased(e -> JavaFX.getEventManager().callEvent(new MenuButtonClickEvent(
+                        GameMode.SINGLEPLAYER)));
+                multiplayer.setOnMouseReleased(e -> JavaFX.getEventManager().callEvent(new MenuButtonClickEvent(
+                        GameMode.MULTIPLAYER)));
             });
         });
     }
 
     public static void main(String...args) {
         launch(args);
+    }
+
+    /**
+     * @return Current game
+     */
+    public static Game getGame() {
+        return game;
+    }
+
+    /**
+     * Sets the game
+     * @param game New game
+     */
+    public static void setGame(Game game) {
+        MasterMind.game = game;
+        game.start();
     }
 }

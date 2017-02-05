@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@../stylesheets/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle id="scorebar" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="506.0" layoutX="251.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" styleClass="scorebar" width="200.0" />
+      <ImageView id="table" fitHeight="555.0" fitWidth="503.0" layoutX="34.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/table.png" />
+         </image>
+      </ImageView>
+      <Label id="red_1" layoutX="389.0" layoutY="55.0" opacity="0.0" styleClass="red_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="white_1" layoutX="419.0" layoutY="55.0" opacity="0.0" styleClass="white_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="red_2" layoutX="389.0" layoutY="95.0" opacity="0.0" styleClass="red_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="white_2" layoutX="419.0" layoutY="95.0" opacity="0.0" styleClass="white_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="red_3" layoutX="389.0" layoutY="135.0" opacity="0.0" styleClass="red_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="white_3" layoutX="419.0" layoutY="135.0" opacity="0.0" styleClass="white_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="red_4" layoutX="389.0" layoutY="175.0" opacity="0.0" styleClass="red_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="white_4" layoutX="419.0" layoutY="175.0" opacity="0.0" styleClass="white_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="red_5" layoutX="389.0" layoutY="215.0" opacity="0.0" styleClass="red_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="white_5" layoutX="419.0" layoutY="215.0" opacity="0.0" styleClass="white_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="red_6" layoutX="389.0" layoutY="255.0" opacity="0.0" styleClass="red_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="white_6" layoutX="419.0" layoutY="255.0" opacity="0.0" styleClass="white_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="red_7" layoutX="389.0" layoutY="295.0" opacity="0.0" styleClass="red_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="white_7" layoutX="419.0" layoutY="295.0" opacity="0.0" styleClass="white_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="red_8" layoutX="389.0" layoutY="335.0" opacity="0.0" styleClass="red_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="white_8" layoutX="419.0" layoutY="335.0" opacity="0.0" styleClass="white_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="red_9" layoutX="389.0" layoutY="375.0" opacity="0.0" styleClass="red_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="white_9" layoutX="419.0" layoutY="375.0" opacity="0.0" styleClass="white_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="red_10" layoutX="389.0" layoutY="415.0" opacity="0.0" styleClass="red_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="white_10" layoutX="419.0" layoutY="415.0" opacity="0.0" styleClass="white_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="red_11" layoutX="389.0" layoutY="455.0" opacity="0.0" styleClass="red_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="white_11" layoutX="419.0" layoutY="455.0" opacity="0.0" styleClass="white_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="red_12" layoutX="389.0" layoutY="495.0" opacity="0.0" styleClass="red_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+      <Label id="white_12" layoutX="419.0" layoutY="495.0" opacity="0.0" styleClass="white_number" text="0">
+         <font>
+            <Font name="Lucida Console" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
