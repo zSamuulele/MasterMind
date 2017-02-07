@@ -1,4 +1,4 @@
-package me.jfxrs.mastermind.objects.grid;
+package me.jfxrs.mastermind.grid;
 
 import eu.iamgio.libfx.api.JavaFX;
 import javafx.scene.Node;

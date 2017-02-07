@@ -1,4 +1,4 @@
-package me.jfxrs.mastermind.objects;
+package me.jfxrs.mastermind.game;
 
 import eu.iamgio.libfx.api.FXML;
 import eu.iamgio.libfx.api.JavaFX;
@@ -6,9 +6,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import me.jfxrs.mastermind.MasterMind;
+import me.jfxrs.mastermind.circles.CircleType;
 import me.jfxrs.mastermind.events.CircleClickEvent;
 import me.jfxrs.mastermind.listeners.CircleListener;
-import me.jfxrs.mastermind.objects.grid.Grid;
+import me.jfxrs.mastermind.grid.Grid;
 
 /**
  * Created by jfxrs on 05/02/2017.

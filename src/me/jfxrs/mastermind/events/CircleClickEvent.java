@@ -1,7 +1,7 @@
 package me.jfxrs.mastermind.events;
 
 import eu.iamgio.customevents.api.Event;
-import me.jfxrs.mastermind.objects.CircleType;
+import me.jfxrs.mastermind.circles.CircleType;
 
 /**
  * Created by jfxrs on 07/02/2017.

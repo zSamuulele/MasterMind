@@ -12,8 +12,8 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import me.jfxrs.mastermind.events.MenuButtonClickEvent;
 import me.jfxrs.mastermind.listeners.MenuListener;
-import me.jfxrs.mastermind.objects.Game;
-import me.jfxrs.mastermind.objects.GameMode;
+import me.jfxrs.mastermind.game.Game;
+import me.jfxrs.mastermind.game.GameMode;
 
 public class MasterMind extends Application {
 

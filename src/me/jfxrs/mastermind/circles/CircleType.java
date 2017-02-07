@@ -1,8 +1,8 @@
-package me.jfxrs.mastermind.objects;
+package me.jfxrs.mastermind.circles;
 
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
-import me.jfxrs.mastermind.objects.grid.Slot;
+import me.jfxrs.mastermind.grid.Slot;
 
 /**
  * Created by jfxrs on 07/02/2017.

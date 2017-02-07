@@ -1,9 +1,9 @@
-package me.jfxrs.mastermind.objects.grid;
+package me.jfxrs.mastermind.grid;
 
 import com.sun.istack.internal.Nullable;
 import eu.iamgio.libfx.api.JavaFX;
 import javafx.scene.layout.Pane;
-import me.jfxrs.mastermind.objects.CircleType;
+import me.jfxrs.mastermind.circles.CircleType;
 
 import java.util.ArrayList;
 import java.util.List;

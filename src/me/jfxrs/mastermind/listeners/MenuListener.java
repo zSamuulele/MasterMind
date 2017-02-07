@@ -7,7 +7,7 @@ import eu.iamgio.libfx.api.animations.Animation;
 import javafx.util.Duration;
 import me.jfxrs.mastermind.MasterMind;
 import me.jfxrs.mastermind.events.MenuButtonClickEvent;
-import me.jfxrs.mastermind.objects.Game;
+import me.jfxrs.mastermind.game.Game;
 
 /**
  * Created by jfxrs on 05/02/2017.

@@ -1,7 +1,7 @@
 package me.jfxrs.mastermind.events;
 
 import eu.iamgio.customevents.api.Event;
-import me.jfxrs.mastermind.objects.GameMode;
+import me.jfxrs.mastermind.game.GameMode;
 
 /**
  * Created by jfxrs on 05/02/2017.

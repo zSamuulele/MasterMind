@@ -4,8 +4,8 @@ import eu.iamgio.customevents.api.EventHandler;
 import eu.iamgio.customevents.api.Listener;
 import me.jfxrs.mastermind.MasterMind;
 import me.jfxrs.mastermind.events.CircleClickEvent;
-import me.jfxrs.mastermind.objects.Game;
-import me.jfxrs.mastermind.objects.grid.Grid;
+import me.jfxrs.mastermind.game.Game;
+import me.jfxrs.mastermind.grid.Grid;
 
 /**
  * Created by jfxrs on 07/02/2017.
