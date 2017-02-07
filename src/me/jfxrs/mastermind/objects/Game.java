@@ -26,6 +26,18 @@ public class Game {
         Parent root = FXML.load(MasterMind.class, "assets/scenes/GameScene.fxml");
         Scene scene = new Scene(root, 900, 600);
         MasterMind.stage.show(scene, "MasterMind - v" + MasterMind.VERSION, false);
+
+        switch(mode) {
+            case SINGLEPLAYER:
+                //TODO
+                break;
+            case LOCAL:
+                //TODO
+                break;
+            case ONLINE:
+                //TODO
+                break;
+        }
     }
 
     /**

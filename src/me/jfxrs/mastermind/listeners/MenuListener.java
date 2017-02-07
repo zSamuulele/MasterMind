@@ -19,10 +19,7 @@ public class MenuListener implements Listener {
         if(MasterMind.getGame() == null) {
             Animation animation = new Animation(Animation.Type.MOVEMENT_Y, -1000, Duration.seconds(0.3), false);
             JavaFX.getRoot().getChildrenUnmodifiable().forEach(animation::play);
-            animation.setOnAnimationCompleted(() -> {
-                MasterMind.setGame(new Game(e.getGameMode()));
-
-            });
+            animation.setOnAnimationCompleted(() -> MasterMind.setGame(new Game(e.getGameMode())));
         }
     }
 }
