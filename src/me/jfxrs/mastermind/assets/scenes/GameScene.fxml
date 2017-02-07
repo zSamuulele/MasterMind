@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@../stylesheets/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="background" stylesheets="@../stylesheets/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle id="scorebar" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="506.0" layoutX="251.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" styleClass="scorebar" width="200.0" />
       <ImageView id="table" fitHeight="555.0" fitWidth="503.0" layoutX="34.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
@@ -136,5 +139,90 @@
             <Font name="Lucida Console" size="26.0" />
          </font>
       </Label>
+      <Circle id="red_circle" fill="#ff1f1f" layoutX="555.0" layoutY="235.0" radius="31.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <Lighting diffuseConstant="1.46" specularConstant="0.71" specularExponent="36.1">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Circle>
+      <Circle id="orange_circle" fill="#ff7921" layoutX="635.0" layoutY="235.0" radius="31.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <Lighting diffuseConstant="1.46" specularConstant="0.71" specularExponent="36.1">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Circle>
+      <Circle id="yellow_circle" fill="#ffdf00" layoutX="715.0" layoutY="235.0" radius="31.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <Lighting diffuseConstant="1.46" specularConstant="0.71" specularExponent="36.1">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="40.61" />
+               </light>
+            </Lighting>
+         </effect>
+      </Circle>
+      <Circle id="green_circle" fill="#00d70b" layoutX="795.0" layoutY="235.0" radius="31.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <Lighting diffuseConstant="1.46" specularConstant="0.71" specularExponent="36.1">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="18.66" />
+               </light>
+            </Lighting>
+         </effect>
+      </Circle>
+      <Circle id="blue_circle" fill="#2170ff" layoutX="595.0" layoutY="305.0" radius="31.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <Lighting diffuseConstant="1.46" specularConstant="0.71" specularExponent="36.1">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Circle>
+      <Circle id="pink_circle" fill="#ff5969" layoutX="675.0" layoutY="305.0" radius="31.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <Lighting diffuseConstant="1.46" specularConstant="0.71" specularExponent="36.1">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="36.22" />
+               </light>
+            </Lighting>
+         </effect>
+      </Circle>
+      <Circle id="gray_circle" fill="#a1a1a1" layoutX="755.0" layoutY="305.0" radius="31.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <Lighting diffuseConstant="1.46" specularConstant="0.71" specularExponent="36.1">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="23.05" />
+               </light>
+            </Lighting>
+         </effect>
+      </Circle>
+      <Circle fill="DODGERBLUE" layoutX="180.0" layoutY="110.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
    </children>
 </AnchorPane>
