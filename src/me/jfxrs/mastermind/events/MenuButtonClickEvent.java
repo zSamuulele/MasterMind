@@ -4,7 +4,7 @@ import eu.iamgio.customevents.api.Event;
 import me.jfxrs.mastermind.objects.GameMode;
 
 /**
- * Created by gioga on 05/02/2017.
+ * Created by jfxrs on 05/02/2017.
  */
 public class MenuButtonClickEvent extends Event {
 

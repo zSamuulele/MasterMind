@@ -5,7 +5,7 @@ import javafx.scene.shape.Circle;
 import me.jfxrs.mastermind.objects.grid.Slot;
 
 /**
- * Created by gioga on 07/02/2017.
+ * Created by jfxrs on 07/02/2017.
  */
 public enum CircleType {
 

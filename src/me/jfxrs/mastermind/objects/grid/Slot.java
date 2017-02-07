@@ -5,7 +5,7 @@ import javafx.scene.Node;
 import javafx.scene.shape.Circle;
 
 /**
- * Created by gioga on 07/02/2017.
+ * Created by jfxrs on 07/02/2017.
  */
 public class Slot {
 

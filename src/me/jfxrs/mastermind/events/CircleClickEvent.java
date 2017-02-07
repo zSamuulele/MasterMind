@@ -4,7 +4,7 @@ import eu.iamgio.customevents.api.Event;
 import me.jfxrs.mastermind.objects.CircleType;
 
 /**
- * Created by gioga on 07/02/2017.
+ * Created by jfxrs on 07/02/2017.
  */
 public class CircleClickEvent extends Event {
 

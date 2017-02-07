@@ -10,7 +10,7 @@ import me.jfxrs.mastermind.events.MenuButtonClickEvent;
 import me.jfxrs.mastermind.objects.Game;
 
 /**
- * Created by gioga on 05/02/2017.
+ * Created by jfxrs on 05/02/2017.
  */
 public class MenuListener implements Listener {
 
