@@ -9,7 +9,14 @@ import me.jfxrs.mastermind.grid.Slot;
  */
 public enum CircleType {
 
-    RED("ff1f1f"), ORANGE("ff7921"), YELLOW("ffdf00"), GREEN("00d70b"), BLUE("2170ff"), PINK("ff5969"), GRAY("a1a1a1");
+    RED("ff1f1f"),
+    ORANGE("ff7921"),
+    YELLOW("ffdf00"),
+    GREEN("00d70b"),
+    BLUE("2170ff"),
+    PINK("ff5969"),
+    GRAY("a1a1a1"),
+    WHITE("fff");
 
     private Paint color;
     CircleType(String color) {

@@ -140,8 +140,9 @@
       <Circle id="orange_circle" fill="#ff7921" layoutX="635.0" layoutY="235.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle id="yellow_circle" fill="#ffdf00" layoutX="715.0" layoutY="235.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle id="green_circle" fill="#00d70b" layoutX="795.0" layoutY="235.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle id="blue_circle" fill="#2170ff" layoutX="595.0" layoutY="305.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle id="pink_circle" fill="#ff5969" layoutX="675.0" layoutY="305.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle id="gray_circle" fill="#a1a1a1" layoutX="755.0" layoutY="305.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle id="blue_circle" fill="#2170ff" layoutX="555.0" layoutY="315.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle id="pink_circle" fill="#ff5969" layoutX="635.0" layoutY="315.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle id="gray_circle" fill="#a1a1a1" layoutX="715.0" layoutY="315.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle id="white_circle" fill="WHITE" layoutX="795.0" layoutY="315.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
    </children>
 </AnchorPane>
