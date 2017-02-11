@@ -5,6 +5,15 @@
 .btn {
     -fx-background-color: #8199A3;
     -fx-text-fill: white;
+    -fx-font-family: "QUARTZO demo Bold";
+}
+
+.btn-menu {
+    -fx-font-size: 120;
+}
+
+.btn-game {
+    -fx-font-size: 54;
 }
 
 .red_number {

@@ -3,6 +3,8 @@ package me.jfxrs.mastermind.grid;
 import com.sun.istack.internal.Nullable;
 import eu.iamgio.libfx.api.JavaFX;
 import javafx.scene.layout.Pane;
+import javafx.scene.shape.Circle;
+import me.jfxrs.mastermind.MasterMind;
 import me.jfxrs.mastermind.circles.CircleType;
 
 import java.util.ArrayList;
@@ -38,7 +40,15 @@ public class Grid {
         String id = "circle_" + slot.getX() + "_" + slot.getY();
         if(JavaFX.fromId(id) != null)
             ((Pane) JavaFX.getRoot()).getChildren().remove(JavaFX.fromId(id));
-        ((Pane) JavaFX.getRoot()).getChildren().add(type.getCircle(slot));
+        if(type != null) {
+            Circle circle = type.getCircle(slot);
+            ((Pane) JavaFX.getRoot()).getChildren().add(circle);
+            circle.setOnMouseReleased(e -> {
+                ((Pane) JavaFX.getRoot()).getChildren().remove(circle);
+                JavaFX.fromId("confirm_btn").setOpacity(
+                        MasterMind.getGame().getGrid().usedSlots(MasterMind.getGame().getActualLine()).length == 4 ? 1 : 0);
+            });
+        }
         return true;
     }
 

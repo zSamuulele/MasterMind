@@ -2,6 +2,7 @@ package me.jfxrs.mastermind.listeners;
 
 import eu.iamgio.customevents.api.EventHandler;
 import eu.iamgio.customevents.api.Listener;
+import eu.iamgio.libfx.api.JavaFX;
 import me.jfxrs.mastermind.MasterMind;
 import me.jfxrs.mastermind.events.CircleClickEvent;
 import me.jfxrs.mastermind.game.Game;
@@ -20,7 +21,11 @@ public class CircleListener implements Listener {
         Grid grid = game.getGrid();
 
         if(grid.usedSlots(game.getActualLine()).length != 4) {
-            grid.setCircle(e.getCircleType(), grid.nextAvaibleSlot(game.getActualLine()).getVerticalLine(), game.getActualLine());
+            grid.setCircle(e.getCircleType(),
+                    grid.nextAvaibleSlot(game.getActualLine()).getVerticalLine(),
+                    game.getActualLine());
         }
+
+        JavaFX.fromId("confirm_btn").setOpacity(grid.usedSlots(game.getActualLine()).length == 4 ? 1 : 0);
     }
 }

@@ -5,6 +5,7 @@ import eu.iamgio.libfx.api.JavaFX;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.shape.Circle;
 import me.jfxrs.mastermind.MasterMind;
 import me.jfxrs.mastermind.circles.CircleType;
 import me.jfxrs.mastermind.events.CircleClickEvent;
@@ -52,7 +53,7 @@ public class Game {
         for(Node n : JavaFX.getRoot().getChildrenUnmodifiable()) {
             if(n.getId() != null && n.getId().contains("_circle")) {
                 n.setOnMouseReleased(e -> JavaFX.getEventManager().callEvent(
-                        new CircleClickEvent(CircleType.valueOf(n.getId().split("_")[0].toUpperCase()))));
+                        new CircleClickEvent(CircleType.valueOf(n.getId().split("_")[0].toUpperCase()), ((Circle) n))));
             }
         }
     }

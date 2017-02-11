@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -144,5 +146,11 @@
       <Circle id="pink_circle" fill="#ff5969" layoutX="635.0" layoutY="315.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle id="gray_circle" fill="#a1a1a1" layoutX="715.0" layoutY="315.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle id="white_circle" fill="WHITE" layoutX="795.0" layoutY="315.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
+      <JFXButton id="confirm_btn" layoutX="548.0" layoutY="433.0" opacity="0.0" text="Confirm">
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-game" />
+         </styleClass>
+      </JFXButton>
    </children>
 </AnchorPane>

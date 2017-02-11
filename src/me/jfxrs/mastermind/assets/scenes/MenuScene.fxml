@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="background" stylesheets="@../stylesheets/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -14,15 +14,23 @@
             <Image url="@../images/mastermind.png" />
          </image>
       </ImageView>
-      <JFXButton id="singleplayer_btn" buttonType="RAISED" layoutX="245.0" layoutY="167.0" styleClass="btn" text="Singleplayer">
+      <JFXButton id="singleplayer_btn" buttonType="RAISED" layoutX="245.0" layoutY="167.0" text="Singleplayer">
          <font>
             <Font name="QUARTZO demo Bold" size="120.0" />
          </font>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-menu" />
+         </styleClass>
       </JFXButton>
-      <JFXButton id="multiplayer_btn" buttonType="RAISED" layoutX="245.0" layoutY="297.0" prefHeight="251.0" prefWidth="834.0" styleClass="btn" text="Multiplayer">
+      <JFXButton id="multiplayer_btn" buttonType="RAISED" layoutX="245.0" layoutY="297.0" prefHeight="251.0" prefWidth="834.0" text="Multiplayer">
          <font>
             <Font name="QUARTZO demo Bold" size="120.0" />
          </font>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-menu" />
+         </styleClass>
       </JFXButton>
    </children>
 </AnchorPane>
