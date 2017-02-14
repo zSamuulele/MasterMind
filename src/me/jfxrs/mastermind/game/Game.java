@@ -9,8 +9,14 @@ import javafx.scene.shape.Circle;
 import me.jfxrs.mastermind.MasterMind;
 import me.jfxrs.mastermind.circles.CircleType;
 import me.jfxrs.mastermind.events.CircleClickEvent;
-import me.jfxrs.mastermind.listeners.CircleListener;
+import me.jfxrs.mastermind.events.ConfirmClickEvent;
 import me.jfxrs.mastermind.grid.Grid;
+import me.jfxrs.mastermind.listeners.CircleListener;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 /**
  * Created by jfxrs on 05/02/2017.
@@ -19,12 +25,16 @@ public class Game {
 
     private GameMode mode;
     private Grid grid;
+    private CircleType[] combination;
     private int hLine;
+    private boolean doubleColors;
 
-    public Game(GameMode mode) {
+    public Game(GameMode mode, boolean doubleColors) {
         this.mode = mode;
         grid = new Grid();
         hLine = 1;
+        this.doubleColors = doubleColors;
+        combination = new CircleType[4];
     }
 
     /**
@@ -40,6 +50,17 @@ public class Game {
 
         switch(mode) {
             case SINGLEPLAYER:
+                List<CircleType> colors = new ArrayList<>();
+                for(int i = 0; i <= 4; i++) {
+                    Random random = new Random();
+                    CircleType type = CircleType.values()[random.nextInt(CircleType.values().length)];
+                    while(!doubleColors && colors.contains(type))
+                        type = CircleType.values()[random.nextInt(CircleType.values().length)];
+                    colors.add(type);
+                }
+                for(int i = 0; i < 4; i++)
+                    combination[i] = colors.get(i);
+                System.out.println(Arrays.toString(combination));
                 //TODO
                 break;
             case LOCAL:
@@ -56,6 +77,8 @@ public class Game {
                         new CircleClickEvent(CircleType.valueOf(n.getId().split("_")[0].toUpperCase()), ((Circle) n))));
             }
         }
+
+        JavaFX.fromId("confirm_btn").setOnMouseReleased(ev -> JavaFX.getEventManager().callEvent(new ConfirmClickEvent()));
     }
 
     /**
@@ -78,6 +101,13 @@ public class Game {
      */
     public Grid getGrid() {
         return grid;
+    }
+
+    /**
+     * @return Current combination
+     */
+    public CircleType[] getCombination() {
+        return combination;
     }
 
     /**

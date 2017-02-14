@@ -3,6 +3,7 @@ package me.jfxrs.mastermind.grid;
 import eu.iamgio.libfx.api.JavaFX;
 import javafx.scene.Node;
 import javafx.scene.shape.Circle;
+import me.jfxrs.mastermind.circles.CircleType;
 
 /**
  * Created by jfxrs on 07/02/2017.
@@ -56,5 +57,24 @@ public class Slot {
             }
         }
         return true;
+    }
+
+    /**
+     * @return Corresponding circle type
+     */
+    public CircleType getCircle() {
+        for(Node n : JavaFX.getRoot().getChildrenUnmodifiable()) {
+            if(n instanceof Circle) {
+                Circle circle = ((Circle) n);
+                if(circle.getCenterX() == x && circle.getCenterY() == y) {
+                    for(CircleType type : CircleType.values()) {
+                        if(type.getColor().toString().equals(circle.getFill().toString())) {
+                            return type;
+                        }
+                    }
+                }
+            }
+        }
+        return null;
     }
 }

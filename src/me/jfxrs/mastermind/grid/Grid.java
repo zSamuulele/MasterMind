@@ -18,8 +18,7 @@ public class Grid {
     private Slot[] slots = new Slot[4 * 12];
 
     public Grid() {
-        int i = 0;
-        for(int y = 70; y <= 70 + (40 * 11); y += 40) {
+        for(int y = 70, i = 0; y <= 70 + (40 * 11); y += 40) {
             for(int x = 120; x <= 120 + (60 * 3); x += 60) {
                 slots[i] = new Slot(x, y);
                 i++;
@@ -29,6 +28,7 @@ public class Grid {
 
     /**
      * Sets a circle to the corresponding slot
+     * @param type Circle type
      * @param vLine Vertical line (1-4)
      * @param hLine Horizontal line (1-12)
      */

@@ -11,9 +11,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import me.jfxrs.mastermind.events.MenuButtonClickEvent;
-import me.jfxrs.mastermind.listeners.MenuListener;
 import me.jfxrs.mastermind.game.Game;
 import me.jfxrs.mastermind.game.GameMode;
+import me.jfxrs.mastermind.listeners.ConfirmListener;
+import me.jfxrs.mastermind.listeners.MenuListener;
 
 public class MasterMind extends Application {
 
@@ -33,6 +34,7 @@ public class MasterMind extends Application {
 
         playMenuAnimation();
         JavaFX.getEventManager().registerEvents(new MenuListener());
+        JavaFX.getEventManager().registerEvents(new ConfirmListener());
     }
 
     /**

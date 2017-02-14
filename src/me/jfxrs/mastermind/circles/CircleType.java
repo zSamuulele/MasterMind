@@ -43,4 +43,11 @@ public enum CircleType {
     public Circle getCircle(Slot slot) {
         return getCircle(slot.getX(), slot.getY());
     }
+
+    /**
+     * @return Current color
+     */
+    public Paint getColor() {
+        return color;
+    }
 }
