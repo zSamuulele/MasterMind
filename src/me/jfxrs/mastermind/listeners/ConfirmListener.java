@@ -50,5 +50,9 @@ public class ConfirmListener implements Listener {
         Label whiteLabel = ((Label) JavaFX.fromId("white_" + game.getActualLine()));
         whiteLabel.setText(white + "");
         whiteLabel.setOpacity(1);
+
+        JavaFX.fromId("confirm_btn").setOpacity(0);
+
+        game.setActualLine(game.getActualLine() + 1);
     }
 }

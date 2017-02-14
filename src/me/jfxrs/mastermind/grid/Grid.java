@@ -44,9 +44,11 @@ public class Grid {
             Circle circle = type.getCircle(slot);
             ((Pane) JavaFX.getRoot()).getChildren().add(circle);
             circle.setOnMouseReleased(e -> {
-                ((Pane) JavaFX.getRoot()).getChildren().remove(circle);
-                JavaFX.fromId("confirm_btn").setOpacity(
-                        MasterMind.getGame().getGrid().usedSlots(MasterMind.getGame().getActualLine()).length == 4 ? 1 : 0);
+                if(hLine == MasterMind.getGame().getActualLine()) {
+                    ((Pane) JavaFX.getRoot()).getChildren().remove(circle);
+                    JavaFX.fromId("confirm_btn").setOpacity(MasterMind.getGame().getGrid()
+                            .usedSlots(MasterMind.getGame().getActualLine()).length == 4 ? 1 : 0);
+                }
             });
         }
         return true;
