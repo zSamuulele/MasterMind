@@ -2,16 +2,22 @@ package me.jfxrs.mastermind.game;
 
 import eu.iamgio.libfx.api.FXML;
 import eu.iamgio.libfx.api.JavaFX;
+import eu.iamgio.libfx.api.animations.Animation;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.util.Duration;
 import me.jfxrs.mastermind.MasterMind;
 import me.jfxrs.mastermind.circles.CircleType;
 import me.jfxrs.mastermind.events.CircleClickEvent;
 import me.jfxrs.mastermind.events.ConfirmClickEvent;
 import me.jfxrs.mastermind.grid.Grid;
-import me.jfxrs.mastermind.listeners.CircleListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,9 +50,6 @@ public class Game {
         Parent root = FXML.load(MasterMind.class, "assets/scenes/GameScene.fxml");
         Scene scene = new Scene(root, 900, 600);
         MasterMind.stage.show(scene, "MasterMind - v" + MasterMind.VERSION, false);
-
-        CircleListener.instance = new CircleListener();
-        JavaFX.getEventManager().registerEvents(CircleListener.instance);
 
         switch(mode) {
             case SINGLEPLAYER:
@@ -84,9 +87,34 @@ public class Game {
     /**
      * Ends the game
      */
-    public void end() {
-        JavaFX.getEventManager().unregisterEvents(CircleListener.instance);
-        //TODO
+    public void end(boolean win) {
+        Rectangle bg = new Rectangle(900, 600);
+        bg.setOpacity(0.7);
+
+        Label label = new Label();
+        label.setText(
+                "You " + (win ? "won in " + getActualLine() + " attempt" + (getActualLine() > 1 ? "s" : "") : "lost") + "!\nClick to exit");
+
+        label.setFont(Font.font("Segoe UI Light", 40));
+        label.setLineSpacing(100);
+        label.setTranslateX(1500);
+        label.setTranslateY(250);
+        label.setTextFill(Paint.valueOf("FFF"));
+
+        ((Pane) JavaFX.getRoot()).getChildren().addAll(bg, label);
+        new Animation(Animation.Type.MOVEMENT_X, 500, Duration.seconds(0.3), false).play(label);
+
+        MasterMind.setGame(null);
+
+        bg.setOnMouseReleased(e -> {
+            Parent root = FXML.load(MasterMind.class, "assets/scenes/MenuScene.fxml");
+            MasterMind.scene = new Scene(root, 900, 600);
+
+            MasterMind.stage.show(MasterMind.scene, "MasterMind - v" + MasterMind.VERSION, false);
+            MasterMind.stage.setIcon(MasterMind.class, "assets/images/mastermind.png");
+
+            MasterMind.playMenuAnimation();
+        });
     }
 
     /**

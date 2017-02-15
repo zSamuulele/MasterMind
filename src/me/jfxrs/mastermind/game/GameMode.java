@@ -5,5 +5,5 @@ package me.jfxrs.mastermind.game;
  */
 public enum GameMode {
 
-    SINGLEPLAYER, MULTIPLAYER, LOCAL, ONLINE
+    SINGLEPLAYER, LOCAL, ONLINE
 }
