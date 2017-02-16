@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import java.lang.String?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -41,5 +42,6 @@
             <String fx:value="btn-menu" />
          </styleClass>
       </JFXButton>
+      <Label id="mastermind" layoutX="7.0" layoutY="586.0" text="MasterMind - by jfxrs" textFill="#8199a3" />
    </children>
 </AnchorPane>
