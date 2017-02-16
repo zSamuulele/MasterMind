@@ -13,8 +13,6 @@ import me.jfxrs.mastermind.grid.Grid;
  */
 public class CircleListener implements Listener {
 
-    public static CircleListener instance;
-
     @EventHandler
     public void onCircleClick(CircleClickEvent e) {
         Game game = MasterMind.getGame();
