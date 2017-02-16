@@ -16,6 +16,8 @@ public class ConfirmListener implements Listener {
 
     @EventHandler
     public void onConfirm(ConfirmClickEvent e) {
+        if(JavaFX.fromId("confirm_btn").getOpacity() == 0)
+            return;
         Game game = MasterMind.getGame();
         Grid grid = game.getGrid();
 
