@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
@@ -47,6 +48,12 @@ public class Game {
         Parent root = FXML.load(MasterMind.class, "assets/scenes/GameScene.fxml");
         Scene scene = new Scene(root, 900, 600);
         MasterMind.stage.show(scene, "MasterMind - v" + MasterMind.VERSION, false);
+        scene.setOnKeyReleased(e -> {
+            if(e.getCode() == KeyCode.ESCAPE) {
+                goToMenu();
+                MasterMind.setGame(null);
+            }
+        });
 
         switch(mode) {
             case SINGLEPLAYER:
@@ -83,8 +90,10 @@ public class Game {
 
     /**
      * Ends the game
+     * @param win Win status
+     * @param showStatus True to show the status
      */
-    public void end(boolean win) {
+    public void end(boolean win, boolean showStatus) {
         Rectangle bg = new Rectangle(900, 600);
         bg.setOpacity(0.7);
 
@@ -103,15 +112,20 @@ public class Game {
 
         MasterMind.setGame(null);
 
-        bg.setOnMouseReleased(e -> {
-            Parent root = FXML.load(MasterMind.class, "assets/scenes/MenuScene.fxml");
-            MasterMind.scene = new Scene(root, 900, 600);
+        bg.setOnMouseReleased(e -> goToMenu());
+    }
 
-            MasterMind.stage.show(MasterMind.scene, "MasterMind - v" + MasterMind.VERSION, false);
-            MasterMind.stage.setIcon(MasterMind.class, "assets/images/mastermind.png");
+    /**
+     * Returns to the main menu
+     */
+    private void goToMenu() {
+        Parent root = FXML.load(MasterMind.class, "assets/scenes/MenuScene.fxml");
+        MasterMind.scene = new Scene(root, 900, 600);
 
-            MasterMind.playMenuAnimation();
-        });
+        MasterMind.stage.show(MasterMind.scene, "MasterMind - v" + MasterMind.VERSION, false);
+        MasterMind.stage.setIcon(MasterMind.class, "assets/images/mastermind.png");
+
+        MasterMind.playMenuAnimation();
     }
 
     /**

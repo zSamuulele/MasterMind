@@ -35,11 +35,11 @@ public class ConfirmListener implements Listener {
         JavaFX.fromId("confirm_btn").setOpacity(0);
 
         if(red == 4) {
-            game.end(true);
+            game.end(true, true);
             return;
         }
         else if(game.getActualLine() == 12) {
-            game.end(false);
+            game.end(false, true);
             return;
         }
 
