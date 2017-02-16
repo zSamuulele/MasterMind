@@ -5,7 +5,6 @@ import eu.iamgio.customevents.api.Listener;
 import eu.iamgio.libfx.api.JavaFX;
 import javafx.scene.control.Label;
 import me.jfxrs.mastermind.MasterMind;
-import me.jfxrs.mastermind.circles.CircleType;
 import me.jfxrs.mastermind.events.ConfirmClickEvent;
 import me.jfxrs.mastermind.game.Game;
 import me.jfxrs.mastermind.grid.Grid;
@@ -20,28 +19,8 @@ public class ConfirmListener implements Listener {
         Game game = MasterMind.getGame();
         Grid grid = game.getGrid();
 
-        int red = 0;
-        int white = 0;
-
-        for(int i = 0; i < 4; i++) {
-            CircleType type = grid.slotAt(i + 1, game.getActualLine()).getCircle();
-
-            if(type == game.getCombination()[i]) {
-                red++;
-            }
-        }
-
-        white:
-        for(int i = 0; i < 4; i++) {
-            for(int j = 0; j < 4; j++) {
-                CircleType type = grid.slotAt(i + 1, game.getActualLine()).getCircle();
-                if(type == game.getCombination()[j]) {
-                    white++;
-                    continue white;
-                }
-            }
-        }
-        white -= red;
+        int red = game.getRedAndWhite()[0];
+        int white = game.getRedAndWhite()[1];
 
         Label redLabel = ((Label) JavaFX.fromId("red_" + game.getActualLine()));
         redLabel.setText(red + "");

@@ -19,10 +19,7 @@ import me.jfxrs.mastermind.events.CircleClickEvent;
 import me.jfxrs.mastermind.events.ConfirmClickEvent;
 import me.jfxrs.mastermind.grid.Grid;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Created by jfxrs on 05/02/2017.
@@ -102,7 +99,7 @@ public class Game {
         label.setTextFill(Paint.valueOf("FFF"));
 
         ((Pane) JavaFX.getRoot()).getChildren().addAll(bg, label);
-        new Animation(Animation.Type.MOVEMENT_X, 500, Duration.seconds(0.3), false).play(label);
+        new Animation(Animation.Type.MOVEMENT_X, 475, Duration.seconds(0.3), false).play(label);
 
         MasterMind.setGame(null);
 
@@ -151,5 +148,35 @@ public class Game {
      */
     public void setActualLine(int hLine) {
         this.hLine = hLine;
+    }
+
+    /**
+     * @return Red and white points
+     */
+    public int[] getRedAndWhite() {
+        int red = 0;
+        int white = 0;
+
+        HashMap<Integer, Integer> passed = new HashMap<>();
+
+        for(int i = 0; i < 4; i++) {
+            CircleType type = grid.slotAt(i + 1, getActualLine()).getCircle();
+            if(type == combination[i]) {
+                red++;
+                passed.put(i, i);
+            }
+        }
+
+        for(int i = 0; i < 4; i++) {
+            for(int j = 0; j < 4; j++) {
+                CircleType type = grid.slotAt(i + 1, getActualLine()).getCircle();
+                if(type == combination[j] && !(passed.containsKey(i) || passed.containsValue(j))) {
+                    white++;
+                    passed.put(i, j);
+                }
+            }
+        }
+
+        return new int[] {red, white};
     }
 }
